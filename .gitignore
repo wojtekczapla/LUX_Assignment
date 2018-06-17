@@ -1,41 +1,33 @@
-# Prerequisites
-*.d
+Bin/*.*
+BinR/*.*
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+obj/
+*.suo
+Release
+Debug
+*.user
+*.pdb
 
-# Precompiled Headers
-*.gch
-*.pch
+/Thales.SICUID.ConfigurationCreator/ApisConfigurationCreator/ApisCfg/ApisDictionary - Kopia.xml
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-.vs/MicrowaveOven/v15/.suo
-.vs/MicrowaveOven/v15/.suo
-.vs/MicrowaveOven/v15/Server/sqlite3/storage.ide-shm
-.vs/MicrowaveOven/v15/.suo
-*.lock
-*.ide
-*.ide-wal
-*.cache
-*.cache
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+bin_release/
