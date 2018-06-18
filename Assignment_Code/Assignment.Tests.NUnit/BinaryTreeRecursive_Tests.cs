@@ -1,18 +1,11 @@
 ﻿using Assignment.BinaryTreeRecursive;
-using Assignment.BTNInterfaces;
 using NUnit.Framework;
 
 namespace Assignment.Tests.NUnit
 {
     [TestFixture]
-    public class BinaryTreeRecursive_Tests
+    public class BinaryTreeRecursive_Tests : BinaryTreeBase_Tests
     {
-        IBTN binaryTreeOne = null;
-        IBTN binaryTreeTwo = null;
-        IBTN btnChildLeft = null;
-        IBTN btnChildRight = null;
-        IComparer comparer = null;
-
         [SetUp]
         public void Setup()
         {
@@ -24,77 +17,55 @@ namespace Assignment.Tests.NUnit
         }
 
         [Test]
-        public void Test_ThatAddLeftNodeWillSuccess()
+        public void Test_ThatRecursiveAddLeftNodeWillSuccess()
         {
             // Arrange
-            btnChildLeft.InitializeNode(1, null, null);
-            binaryTreeOne = new BTN();
-
-            //Act
-            binaryTreeOne.InitializeNode(2, btnChildLeft, null);
+            // Act
+            var result = base.Test_ThatAddLeftNodeWillSuccess();
 
             // Assert
-            Assert.IsTrue(binaryTreeOne.Left != null);
+            Assert.IsTrue(result.Left != null);
         }
 
         [Test]
-        public void Test_ThatAddRightNodeWillSuccess()
+        public void Test_ThatRecursiveAddRightNodeWillSuccess()
         {
             // Arrange
-            btnChildRight.InitializeNode(3, null, null);
-            binaryTreeOne = new BTN();
-
-            //Act
-            binaryTreeOne.InitializeNode(2, null, btnChildRight);
+            // Act
+            var result = base.Test_ThatAddRightNodeWillSuccess();
 
             // Assert
-            Assert.IsTrue(binaryTreeOne.Right != null);
+            Assert.IsTrue(result.Right != null);
         }
 
         [Test]
-        public void Test_ThatComparingTwoNullTreesEqual()
+        public void Test_ThatRecursiveComparingTwoNullTreesEqual()
         {
             // Arrange
-
-            //Act
-            var result = comparer.Compare(binaryTreeOne, binaryTreeTwo);
+            // Act
+            var result = base.Test_ThatComparingTwoNullTreesEqual();
 
             // Assert
             Assert.IsTrue(result);
         }
 
         [Test]
-        public void Test_ThatComparingTwoIdenticalTreesEqual()
+        public void Test_ThatRecursiveComparingTwoIdenticalTreesEqual()
         {
             // Arrange
-            btnChildLeft.InitializeNode(1, null, null);
-            btnChildRight.InitializeNode(3, null, null);
-
-            binaryTreeOne = new BTN();
-            binaryTreeOne.InitializeNode(2, btnChildLeft, btnChildRight);
-
-            //Act
-            var result = comparer.Compare(binaryTreeOne, binaryTreeOne);
-
+            // Act
+            var result = base.Test_ThatComparingTwoIdenticalTreesEqual();
 
             // Assert
             Assert.IsTrue(result);
         }
 
         [Test]
-        public void Test_ThatComparingTwoDifferentTreesDifferent()
+        public void Test_ThatRecursiveComparingTwoDifferentTreesDifferent()
         {
             // Arrange
-            btnChildLeft.InitializeNode(1, null, null);
-            btnChildRight.InitializeNode(3, null, null);
-
-            binaryTreeOne.InitializeNode(2, btnChildLeft, btnChildRight);
-
-            binaryTreeTwo.InitializeNode(2, btnChildRight, btnChildLeft);
-
-            //Act
-            var result = comparer.Compare(binaryTreeOne, binaryTreeTwo);
-
+            // Act
+            var result = base.Test_ThatComparingTwoDifferentTreesDifferent();
 
             // Assert
             Assert.IsFalse(result);
