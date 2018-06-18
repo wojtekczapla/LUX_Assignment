@@ -9,7 +9,7 @@
             return CompareLocal(tree1, tree2);
         }
 
-        public static bool CompareLocal(IBTN tree1, IBTN tree2)
+        private static bool CompareLocal(IBTN tree1, IBTN tree2)
         {
             if (tree1 == null && tree2 == null)
             {
