@@ -54,13 +54,13 @@
       <Project>{c7cef057-2f00-4600-9d94-4ad95519c5dc}</Project>
       <Name>BTNInterfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BTNTreeOne\BinaryTreeRecursive.csproj">
-      <Project>{849ac4b2-2104-414a-aba4-364dd286f4e4}</Project>
-      <Name>BinaryTreeRecursive</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BTNTrreTwo\BinaryTreeEquatable.csproj">
+    <ProjectReference Include="..\BTNTreeEquatable\BinaryTreeEquatable.csproj">
       <Project>{a2e6c437-2e30-414b-b7f1-abb07ccca6d3}</Project>
       <Name>BinaryTreeEquatable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BTNTreeRecursive\BinaryTreeRecursive.csproj">
+      <Project>{849ac4b2-2104-414a-aba4-364dd286f4e4}</Project>
+      <Name>BinaryTreeRecursive</Name>
     </ProjectReference>
     <ProjectReference Include="..\ElementsCollection\ElementsCollection.csproj">
       <Project>{6a407202-c768-4421-bc1c-7395bc8dc846}</Project>
